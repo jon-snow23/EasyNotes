@@ -103,25 +103,34 @@
 
                 </com.yahiaangelo.markdownedittext.MarkdownEditText>
 
-
             </LinearLayout>
 
 
         </androidx.core.widget.NestedScrollView>
 
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/fab_color_pick"
-            android:layout_margin="15dp"
-            android:layout_gravity="bottom|right"
-            android:src="@drawable/ic_round_color_lens_24"
-            app:backgroundTint="@color/purple">
+        <LinearLayout
+            android:layout_width="160sp"
+            android:orientation="vertical"
+            android:layout_gravity="bottom|end"
+            android:gravity="end"
+            android:layout_margin="12sp"
+            android:layout_height="wrap_content">
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            <include layout="@layout/record_button"
+                android:id="@+id/record"/>
 
-
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/fab_color_pick"
+                android:layout_marginEnd="12sp"
+                android:layout_margin="6sp"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/ic_round_color_lens_24"
+                app:backgroundTint="@color/purple">
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </LinearLayout>
     </FrameLayout>
 
 
