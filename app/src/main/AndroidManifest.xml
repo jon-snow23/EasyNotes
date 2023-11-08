@@ -12,6 +12,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/cloudy_notes_transparent"
         android:label="@string/app_name"
+        android:windowSoftInputMode="adjustResize"
         android:roundIcon="@drawable/cloudy_notes_transparent"
         android:supportsRtl="true"
         android:theme="@style/Theme.EASYNOTES"

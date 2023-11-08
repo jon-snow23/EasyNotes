@@ -110,11 +110,12 @@
 
 
         <LinearLayout
-            android:layout_width="160sp"
-            android:orientation="vertical"
+            android:layout_width="220sp"
+            android:orientation="horizontal"
             android:layout_gravity="bottom|end"
-            android:gravity="end"
+            android:gravity="end|center_vertical"
             android:layout_margin="12sp"
+            android:layout_marginBottom="16sp"
             android:layout_height="wrap_content">
 
             <include layout="@layout/record_button"
@@ -125,10 +126,12 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/fab_color_pick"
                 android:layout_marginEnd="12sp"
-                android:layout_margin="6sp"
+                app:tint="@color/white"
+                android:layout_marginStart="8sp"
+                android:layout_marginBottom="5sp"
                 android:layout_gravity="bottom|end"
-                android:src="@drawable/ic_round_color_lens_24"
-                app:backgroundTint="@color/purple">
+                app:backgroundTint="@color/purple"
+                android:src="@drawable/ic_round_color_lens_24">
             </com.google.android.material.floatingactionbutton.FloatingActionButton>
         </LinearLayout>
     </FrameLayout>
