@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
@@ -11,6 +12,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/cloudy_notes_transparent"
         android:label="@string/app_name"
+        android:windowSoftInputMode="adjustResize"
         android:roundIcon="@drawable/cloudy_notes_transparent"
         android:supportsRtl="true"
         android:theme="@style/Theme.EASYNOTES"
