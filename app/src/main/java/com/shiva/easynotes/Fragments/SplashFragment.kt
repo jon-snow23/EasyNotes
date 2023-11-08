@@ -83,7 +83,7 @@ class SplashFragment : Fragment() {
         checkUser()
 
         val googleSignInOptions= GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken("888079073965-gvd0guh64imme79p9fimpagms0pi6anp.apps.googleusercontent.com")
+            .requestIdToken("229994497449-l2lq80md2dc4cfdukki94n21cdapml7u.apps.googleusercontent.com")
             .requestEmail()
             .build()
 
@@ -252,7 +252,7 @@ class SplashFragment : Fragment() {
 
             try {
                 val googleSignInOptions= GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-                    .requestIdToken("1077959185777-edbl86nrvdlt8un69mqhicjc64qake21.apps.googleusercontent.com")
+                    .requestIdToken("229994497449-l2lq80md2dc4cfdukki94n21cdapml7u.apps.googleusercontent.com")
                     .requestEmail()
                     .build()
 

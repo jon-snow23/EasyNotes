@@ -95,6 +95,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/centerline"
+                    android:background="@drawable/custom_edittext"
                     android:layout_marginBottom="10dp"
                     android:id="@+id/email"
                     android:layout_marginRight="30dp"
@@ -105,6 +106,7 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/loginemail"
                         android:hint="Enter Your Email"
+                        android:background="@drawable/custom_edittext"
                         android:inputType="textEmailAddress">
 
                     </EditText>
@@ -116,6 +118,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/centerline"
+                    android:background="@drawable/custom_edittext"
                     android:layout_marginTop="10dp"
                     android:id="@+id/password"
                     android:layout_marginRight="30dp"
@@ -126,6 +129,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/loginpassword"
+                        android:background="@drawable/custom_edittext"
                         android:hint="Enter Your Password"
                         android:inputType="textPassword"
                         android:autofillHints="password">
