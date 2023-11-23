@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="16sp"
+    android:layout_marginTop="4sp"
+    android:elevation="32sp"
+    android:layout_marginBottom="4sp"
+    android:layout_marginStart="12sp"
+    android:layout_marginEnd="12sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_marginTop="6sp"
+        android:layout_marginBottom="6sp"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginStart="12sp"
+            android:layout_marginEnd="12sp"
+            android:layout_marginTop="6sp"
+            android:layout_marginBottom="6sp"
+            android:text="hello this is tejas and I am just testing how this looks
+when i type some random lines to check about the maxLInes feature of android studio"
+            android:maxLines="2"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:layout_height="wrap_content">
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="140sp"
+                android:layout_height="40sp"
+                android:backgroundTint="@color/green"
+                app:cornerRadius="16sp"
+                android:id="@+id/task_complete_btn"
+                android:layout_marginStart="12sp"
+                android:textSize="10sp"
+                android:text="Mark Complete ?"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="60sp"
+                android:layout_height="40sp"
+                android:backgroundTint="@color/green"
+                app:cornerRadius="16sp"
+                android:layout_marginStart="12sp"
+                android:textSize="10sp"
+                android:text="Edit"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

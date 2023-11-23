@@ -22,6 +22,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
@@ -30,6 +31,7 @@ import com.google.android.gms.auth.api.Auth
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.transition.MaterialElevationScale
@@ -81,7 +83,7 @@ class NoteFragment : Fragment() {
 
     private var isGrid=false
 
-
+    private lateinit var moveToTaskFragment:FloatingActionButton
 
     private var layoutManager =
         StaggeredGridLayoutManager(1
@@ -138,7 +140,10 @@ class NoteFragment : Fragment() {
 
         requireView().hideKeyboard()
 
-
+        moveToTaskFragment = view.findViewById(R.id.gototaskfragment)
+        moveToTaskFragment.setOnClickListener{
+            findNavController().navigate(R.id.action_noteFragment_to_taskFragment)
+        }
         CoroutineScope(Dispatchers.Main).launch {
             delay(10)
 

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="6sp"
+    app:cardCornerRadius="12sp"
+    app:cardElevation="32dp"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="12sp"
+        android:paddingBottom="12sp"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:id="@+id/task_message"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16sp"
+            android:text="this is the task message"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/task_reminder"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16sp"
+            android:text="this is the task timing"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:layout_marginEnd="12sp"
+            android:layout_marginTop="6sp"
+            android:layout_marginStart="12sp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="75sp"
+                android:layout_marginEnd="12sp"
+                android:text="Edit?"
+                android:backgroundTint="@color/green"
+                app:cornerRadius="16sp"
+                android:layout_gravity="end"
+                android:layout_height="40sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="135sp"
+                android:text="Completed?"
+                android:backgroundTint="@color/green"
+                app:cornerRadius="16sp"
+                android:layout_gravity="end"
+                android:layout_height="40sp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

@@ -20,6 +20,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.shiva.easynotes.Connections.ConnectivityObserver
 import com.shiva.deverse.Utils.NetworkConnectivityObserver
 import com.shiva.easynotes.R
+import com.shiva.easynotes.TaskDatabase
+import com.shiva.easynotes.TaskRepository
+import com.shiva.easynotes.TaskViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
@@ -31,6 +34,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var noInternet: LottieAnimationView
 
     private lateinit var connectivityObserver: ConnectivityObserver
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
