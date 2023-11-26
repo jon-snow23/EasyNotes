@@ -68,8 +68,6 @@ class SignInFragment : Fragment() {
                 firebaseAuth.signInWithEmailAndPassword(mail, password)
                     .addOnCompleteListener { task ->
                         if (task.isSuccessful) {
-
-
                             checkMailVerification()
                         } else {
                             Toast.makeText(requireContext(),

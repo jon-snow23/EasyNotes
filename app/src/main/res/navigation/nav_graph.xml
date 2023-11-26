@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_noteFragment_to_saveEditFragment"
             app:destination="@id/saveEditFragment" />
+        <action
+            android:id="@+id/action_noteFragment_to_taskFragment"
+            app:destination="@id/taskFragment" />
     </fragment>
     <fragment
         android:id="@+id/saveEditFragment"
@@ -23,4 +26,9 @@
             android:id="@+id/action_saveEditFragment_to_noteFragment"
             app:destination="@id/noteFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/taskFragment"
+        android:name="com.shiva.easynotes.Fragments.TaskFragment"
+        android:label="fragment_task"
+        tools:layout="@layout/fragment_task" />
 </navigation>

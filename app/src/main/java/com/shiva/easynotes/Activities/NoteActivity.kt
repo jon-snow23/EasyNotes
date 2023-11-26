@@ -1,6 +1,7 @@
 package com.shiva.easynotes.Activities
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.os.Build
@@ -20,6 +21,9 @@ import com.google.firebase.auth.FirebaseAuth
 import com.shiva.easynotes.Connections.ConnectivityObserver
 import com.shiva.deverse.Utils.NetworkConnectivityObserver
 import com.shiva.easynotes.R
+import com.shiva.easynotes.TaskDatabase
+import com.shiva.easynotes.TaskRepository
+import com.shiva.easynotes.TaskViewModel
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.onEach
 
@@ -33,12 +37,16 @@ class NoteActivity : AppCompatActivity() {
     private lateinit var noInternet: LottieAnimationView
 
     private lateinit var connectivityObserver: ConnectivityObserver
-
+    lateinit var viewModel : TaskViewModel
+    lateinit var sharedPreferences: SharedPreferences
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_note)
 
 
+        val db = TaskDatabase.getDatabase(this)
+        val repository = TaskRepository(db)
+        viewModel = TaskViewModel(application, repository, this)
 
         parentLayout=findViewById(R.id.parent_layout)
 
@@ -96,7 +104,8 @@ class NoteActivity : AppCompatActivity() {
 
         checkUser()
 
-
+        // Create a new SharedPreferences file or access an existing one with a specific name
+        sharedPreferences = this.getSharedPreferences("EasyNotesSharedPreference", Context.MODE_PRIVATE)
 
     }
 

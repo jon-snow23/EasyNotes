@@ -4,8 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragments.NoteFragment"
-    android:background="?attr/backgroundColor">
+    tools:context=".Fragments.TaskFragment">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -32,7 +31,7 @@
                     app:layout_constraintTop_toTopOf="parent"
                     android:id="@+id/app_title"
                     android:fontFamily="@font/google_sans_bold"
-                    android:text="My Notes"
+                    android:text="Tasks"
                     android:textSize="30sp"
                     android:textColor="?attr/colorOnSecondary"
                     android:layout_marginTop="15dp"
@@ -93,7 +92,7 @@
                         android:drawableStart="@drawable/ic_round_search_24"
                         android:drawablePadding="5dp"
                         android:imeOptions="actionSearch"
-                        android:hint="Search"
+                        android:hint="Search from Your Tasks"
                         android:paddingStart="18dp"
                         android:paddingTop="4dp"
                         android:paddingEnd="18dp"
@@ -116,16 +115,14 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rv_note"
+        android:id="@+id/rv_task"
         android:clipToPadding="false"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:paddingBottom="5dp"
         android:transitionGroup="true"
-        tools:listitem="@layout/note_layout"
         android:background="@color/transparent"
         android:backgroundTint="@color/transparent">
 
@@ -151,20 +148,11 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/gototaskfragment"
-        android:src="@drawable/ic_clock"
-        android:layout_gravity="end|bottom"
-        android:layout_marginEnd="20sp"
-        android:layout_marginBottom="100sp"/>
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
-        android:id="@+id/add_note_fab"
+        android:id="@+id/add_task_fab"
         android:focusable="true"
         android:clickable="true"
         android:animateLayoutChanges="true"
@@ -192,7 +180,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/chatFabText"
             android:fontFamily="@font/google_sans_regular"
-            android:text="ADD NOTE"
+            android:text="Create Task"
             android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
             android:layout_marginEnd="20dp"
